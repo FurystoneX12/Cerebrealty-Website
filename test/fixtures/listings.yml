@@ -1,0 +1,19 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  type: 
+  object: MyString
+  floor_area: 1
+  lot_area: 1
+  bedrooms: 1
+  bathrooms: 1
+  car_park: 1
+
+two:
+  type: 
+  object: MyString
+  floor_area: 1
+  lot_area: 1
+  bedrooms: 1
+  bathrooms: 1
+  car_park: 1

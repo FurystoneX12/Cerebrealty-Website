@@ -1,0 +1,21 @@
+
+<!-- nav bar is outest so the whole header is background color black -->
+<nav class="navbar " style="background-color: black;">
+	<!-- reason why container inside nav bar is to squeeze content so not so expanded -->
+	<div class="container">
+		<!-- there is a container fluid for no reason -->
+		<div class="container-fluid">
+			<h1 >
+				<!-- this is in h1 so the logo is grand enough -->
+				<a href="<%= root_path %>" class="navbar-brand" style="color: white;">
+					<%= image_tag("website_icon.png", style:"height: 50px;") %>
+					Cerebrealty
+				</a>
+				<!-- this link to real estate section is inside h1 so it is in the same line as the logo -->
+				<a href="#" class="btn btn-outline-success">Real Estate Section</a>
+				<a href="#" class="btn btn-outline-success">Law Section</a>
+				<a href="" class="btn btn-outline-success">Engineering Section</a>
+			</h1>
+		</div>
+	</div>
+</nav>
