@@ -1,34 +1,40 @@
 
 <div class="container">
-	<h1>Articles</h1><h2>Stuff we offer</h2>
-	<div class="row">
-		<div class="col-sm-6">
-			<div class="card">
-
-				<div class="card-body"></a>
-					<a class="link link-dark" href="<%= home_about_path %>"><h5 class="card-title">About Us</h5></a>
-					<p>Cerebrealty.com.ph is a website designed for property enlistment, display of enlisted properties offered by some of the top developers in the Philippines like Avida, SM Development Corporation (SMDC), AyalaLand, Al... <a href="<%= home_about_path %>">See More...</a></p>
-				</div>
-			</div>
-		</div>
-		<div class="col-sm-6">
-			<div class="card text-center">
-				<div class="card-body">
-					<br>
-					<h5 class="card-title"><i>Coming Soon...🔨🔨</i></h5>
-					<br>
-					<br>
-				</div>
-			</div>
+	<h1>Home - Cerebrealty</h1>
+	<br>
+	<div class="card w-75">
+		<a href="<%= home_about_path %>">
+			<%= image_tag("background.png", style:"width: 100%;") %>
+		</a>
+		<div class="card-body">
+			<a class="link link-dark" href="<%= home_about_path %>"><h5 class="card-title">About Us</h5></a>
+			<p>
+				Cerebrealty.com.ph is a website designed for property enlistment, display of enlisted properties offered by some of the top developers in the Philippines like Avida, SM Development Corporation (SMDC), AyalaLand, Al... 
+				<a href="<%= home_about_path %>">See More...</a>
+			</p>
 		</div>
 	</div>
-</div>
-<br>
-<div class="container">
-	<div class="row">
-		<div class="col-sm-6">
+	<br>
+	<h2>Stuff we offer</h2>
+	<div class="row row-cols-1 row-cols-md-3 g-4">
+		<div class="col">
 			<div class="card">
-
+				<div class="card-body">
+					<h5 class="card-title">Card title</h5>
+					<p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+				</div>
+			</div>
+		</div>
+		<div class="col">
+			<div class="card">
+				<div class="card-body">
+					<h5 class="card-title">Card title</h5>
+					<p class="card-text">This is a longer card with supporting text below as a natural lead-in  additional content. This content is a little bit longer.</p>
+				</div>
+			</div>
+		</div>
+		<div class="col">
+			<div class="card">
 				<div class="card-body">
 					<%= image_tag("land surveying.png", style:"width: 100%;") %>
 					<h5 class="card-title">Land Surveying (coming soon)</h5>
@@ -36,41 +42,28 @@
 				</div>
 			</div>
 		</div>
-		<div class="col-sm-6">
+		<div class="col">
 			<div class="card">
 				<div class="card-body">
 					<%= image_tag("land plotting.png", style:"width: 100%;") %>
 					<h5 class="card-title">Land Title plotting (coming soon)</h5>
-					<p class="card-text">Using our in-development software, determine the shape of your property with the help of the coordinates enlisted at the back of your title.</p>
+					<p class="card-text">Using our in-development software, determine the shape of your property  the help of the coordinates enlisted at the back of your title.</p>
+				</div>
+			</div>
+		</div>
+		<div class="col">
+			<div class="card">
+				<div class="card-body text-center">
+					<br><br><br><br><br><br>
+					<a href="<%= home_articles_path %>">
+						<button type="button" class="btn btn-primary">See More Articles</button>
+					</a>
+					<br><br><br><br><br><br>
 				</div>
 			</div>
 		</div>
 	</div>
-</div>
-<br>
-<div class="container">
-	<div class="row">
-  <div class="col-sm-6">
-    <div class="card">
-      <div class="card-body">
-        <h5 class="card-title">Special title treatment</h5>
-        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-        <a href="#" class="btn btn-primary">Go somewhere</a>
-      </div>
-    </div>
-  </div>
-  <div class="col-sm-6">
-    <div class="card">
-      <div class="card-body">
-        <h5 class="card-title">Special title treatment</h5>
-        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-        <a href="#" class="btn btn-primary">Go somewhere</a>
-      </div>
-    </div>
-  </div>
-</div>
-</div>
-
+</div> 
 <br>
 <div class="bg-primary">
 	<br>

@@ -1,17 +1,23 @@
 
 <!-- nav bar is outest so the whole header is background color black -->
-<nav class="navbar " style="background-color: black;">
+
+
+<nav class="navbar navbar-expand-lg navbar-dark" style="background-color: black;">
 	<!-- reason why container inside nav bar is to squeeze content so not so expanded -->
-	<div class="container">
-		<!-- there is a container fluid for no reason -->
-		<div class="container-fluid">
+	<div class="container container-fluid">
+		<h1>
+			<a href="<%= root_path %>" class="navbar-brand">
+				<%= image_tag("website_icon.png", style:"height: 50px;") %>
+				Cerebrealty
+			</a>
+		</h1>
+		<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+			<!-- for mobile devices, this is the button that you tap to see other sections -->
+			<span class="navbar-toggler-icon text-muted"></span>
+		</button>
+		<div class="collapse navbar-collapse" id="navbarSupportedContent">
 			<h1 >
-				<!-- this is in h1 so the logo is grand enough -->
-				<a href="<%= root_path %>" class="navbar-brand" style="color: white;">
-					<%= image_tag("website_icon.png", style:"height: 50px;") %>
-					Cerebrealty
-				</a>
-				<!-- this link to real estate section is inside h1 so it is in the same line as the logo -->
+					<!-- this link to real estate section is inside h1 so it is in the same line as the logo -->
 				<a href="#" class="btn btn-outline-success">Real Estate Section</a>
 				<a href="#" class="btn btn-outline-success">Law Section</a>
 				<a href="" class="btn btn-outline-success">Engineering Section</a>
