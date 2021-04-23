@@ -1,0 +1,23 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  offer_type: MyString
+  object: MyString
+  land_area: 1.5
+  floor_area: 1.5
+  area: MyString
+  town_and_province: MyString
+  bedroom: 1
+  bathroom: 1
+  carport: 1
+
+two:
+  offer_type: MyString
+  object: MyString
+  land_area: 1.5
+  floor_area: 1.5
+  area: MyString
+  town_and_province: MyString
+  bedroom: 1
+  bathroom: 1
+  carport: 1

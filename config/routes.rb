@@ -1,5 +1,4 @@
 Rails.application.routes.draw do
-  resources :listings
   #get 'home/index'
   get "home/about"
   get "home/contact_us"
@@ -8,6 +7,7 @@ Rails.application.routes.draw do
   get "home/real_estate"
   get "home/law_section"
   get "home/engineering_section"
+  #get "listings/index"
   root "home#index"
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end
