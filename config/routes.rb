@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   #get 'home/index'
-  #get "home/about"
-  get "home/about_us"
+  #get "about"
+  get "home/about_page"
   get "home/contact_us"
   get "home/terms_and_conditions"
   get "home/articles"
