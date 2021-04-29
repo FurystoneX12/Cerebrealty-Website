@@ -17,7 +17,7 @@ class PropertiesControllerTest < ActionDispatch::IntegrationTest
 
   test "should create property" do
     assert_difference('Property.count') do
-      post properties_url, params: { property: { area: @property.area, bathroom: @property.bathroom, bedroom: @property.bedroom, carport: @property.carport, floor_area: @property.floor_area, land_area: @property.land_area, object: @property.object, offer_type: @property.offer_type, town_and_province: @property.town_and_province } }
+      post properties_url, params: { property: { bathroom: @property.bathroom, bedroom: @property.bedroom, carport: @property.carport, floor_area: @property.floor_area, image: @property.image, land_area: @property.land_area, object: @property.object, offer_type: @property.offer_type, town_and_province: @property.town_and_province } }
     end
 
     assert_redirected_to property_url(Property.last)
@@ -34,7 +34,7 @@ class PropertiesControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should update property" do
-    patch property_url(@property), params: { property: { area: @property.area, bathroom: @property.bathroom, bedroom: @property.bedroom, carport: @property.carport, floor_area: @property.floor_area, land_area: @property.land_area, object: @property.object, offer_type: @property.offer_type, town_and_province: @property.town_and_province } }
+    patch property_url(@property), params: { property: { bathroom: @property.bathroom, bedroom: @property.bedroom, carport: @property.carport, floor_area: @property.floor_area, image: @property.image, land_area: @property.land_area, object: @property.object, offer_type: @property.offer_type, town_and_province: @property.town_and_province } }
     assert_redirected_to property_url(@property)
   end
 

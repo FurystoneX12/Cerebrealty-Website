@@ -14,11 +14,11 @@ class PropertiesTest < ApplicationSystemTestCase
     visit properties_url
     click_on "New Property"
 
-    fill_in "Area", with: @property.area
     fill_in "Bathroom", with: @property.bathroom
     fill_in "Bedroom", with: @property.bedroom
     fill_in "Carport", with: @property.carport
     fill_in "Floor area", with: @property.floor_area
+    fill_in "Image", with: @property.image
     fill_in "Land area", with: @property.land_area
     fill_in "Object", with: @property.object
     fill_in "Offer type", with: @property.offer_type
@@ -33,11 +33,11 @@ class PropertiesTest < ApplicationSystemTestCase
     visit properties_url
     click_on "Edit", match: :first
 
-    fill_in "Area", with: @property.area
     fill_in "Bathroom", with: @property.bathroom
     fill_in "Bedroom", with: @property.bedroom
     fill_in "Carport", with: @property.carport
     fill_in "Floor area", with: @property.floor_area
+    fill_in "Image", with: @property.image
     fill_in "Land area", with: @property.land_area
     fill_in "Object", with: @property.object
     fill_in "Offer type", with: @property.offer_type

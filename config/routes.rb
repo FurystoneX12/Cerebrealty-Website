@@ -1,7 +1,8 @@
 Rails.application.routes.draw do
+  resources :properties
   #get 'home/index'
   #get "about"
-  get "home/about_page"
+  get "home/about_us"
   get "home/contact_us"
   get "home/terms_and_conditions"
   get "home/articles"
