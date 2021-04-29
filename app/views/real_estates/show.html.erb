@@ -1,49 +1,52 @@
-<p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Offer type:</strong>
-  <%= @real_estate.offer_type %>
-</p>
+<div class="container">
+  <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Object:</strong>
-  <%= @real_estate.object %>
-</p>
+  <p>
+    <strong>Offer type:</strong>
+    <%= @real_estate.offer_type %>
+  </p>
 
-<p>
-  <strong>Land area:</strong>
-  <%= @real_estate.land_area %>
-</p>
+  <p>
+    <strong>Object:</strong>
+    <%= @real_estate.object %>
+  </p>
 
-<p>
-  <strong>Floor area:</strong>
-  <%= @real_estate.floor_area %>
-</p>
+  <p>
+    <strong>Land area:</strong>
+    <%= @real_estate.land_area %>
+  </p>
 
-<p>
-  <strong>Town and province:</strong>
-  <%= @real_estate.town_and_province %>
-</p>
+  <p>
+    <strong>Floor area:</strong>
+    <%= @real_estate.floor_area %>
+  </p>
 
-<p>
-  <strong>Bedroom:</strong>
-  <%= @real_estate.bedroom %>
-</p>
+  <p>
+    <strong>Town and province:</strong>
+    <%= @real_estate.town_and_province %>
+  </p>
 
-<p>
-  <strong>Bathroom:</strong>
-  <%= @real_estate.bathroom %>
-</p>
+  <p>
+    <strong>Bedroom:</strong>
+    <%= @real_estate.bedroom %>
+  </p>
 
-<p>
-  <strong>Carport:</strong>
-  <%= @real_estate.carport %>
-</p>
+  <p>
+    <strong>Bathroom:</strong>
+    <%= @real_estate.bathroom %>
+  </p>
 
-<p>
-  <strong>Image:</strong>
-  <%= @real_estate.image %>
-</p>
+  <p>
+    <strong>Carport:</strong>
+    <%= @real_estate.carport %>
+  </p>
 
-<%= link_to 'Edit', edit_real_estate_path(@real_estate) %> |
-<%= link_to 'Back', real_estates_path %>
+  <p>
+    <strong>Image:</strong>
+    <%= @real_estate.image %>
+  </p>
+
+  <%= link_to 'Edit', edit_real_estate_path(@real_estate) %> |
+  <%= link_to 'Back', real_estates_path %>
+</div>
