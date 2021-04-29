@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :real_estates
   resources :listings
   resources :properties
   #get 'home/index'
@@ -7,7 +8,6 @@ Rails.application.routes.draw do
   get "home/contact_us"
   get "home/terms_and_conditions"
   get "home/articles"
-  get "home/real_estate"
   get "home/law_section"
   get "home/engineering_section"
   #get "listings/index"
