@@ -13,12 +13,12 @@
 
   <div class="field">
     <%= form.label :offer_type %>
-    <%= form.text_field :offer_type %>
+    <%= form.select :offer_type, ["For Sale", "For Lease", "Development", "Foreclosed"] %>
   </div>
 
   <div class="field">
     <%= form.label :object %>
-    <%= form.text_field :object %>
+    <%= form.select :object, ["Condominium", "House and Lot", "House", "Lot", "Townhouse", "Lot with Structure", "Farmland", "Apartment", "Commercial", "Industrial"] %>
   </div>
 
   <div class="field">
