@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_04_29_101812) do
+ActiveRecord::Schema.define(version: 2021_05_01_142630) do
 
   create_table "real_estates", force: :cascade do |t|
     t.string "offer_type"
@@ -24,8 +24,10 @@ ActiveRecord::Schema.define(version: 2021_04_29_101812) do
     t.binary "image"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.text "caption"
     t.index ["bathroom"], name: "index_real_estates_on_bathroom"
     t.index ["bedroom"], name: "index_real_estates_on_bedroom"
+    t.index ["caption"], name: "index_real_estates_on_caption"
     t.index ["carport"], name: "index_real_estates_on_carport"
     t.index ["floor_area"], name: "index_real_estates_on_floor_area"
     t.index ["land_area"], name: "index_real_estates_on_land_area"

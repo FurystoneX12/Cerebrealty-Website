@@ -11,51 +11,86 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= form.label :offer_type %>
-    <%= form.select :offer_type, ["For Sale", "For Lease", "Development", "Foreclosed"] %>
+  <div class="input-group mb-3">
+    <span class="input-group-text" id="basic-addon1">
+      <%= form.label :caption %>
+    </span>
+
+    <%= form.text_field :caption, class:"form-control" %>
   </div>
 
-  <div class="field">
-    <%= form.label :object %>
+  <div class="input-group mb-3">
+    <span class="input-group-text" id="basic-addon1">
+      <%= form.label :offer_type %>
+    </span>
+
+    <%= form.select :offer_type, ["For Sale", "For Lease", "Development", "Foreclosed"], class:"form-select" %>
+  </div>
+
+  <div class="input-group mb-3">
+    <span class="input-group-text" id="basic-addon1">
+      <%= form.label :object %>
+    </span>
+
     <%= form.select :object, ["Condominium", "House and Lot", "House", "Lot", "Townhouse", "Lot with Structure", "Farmland", "Apartment", "Commercial", "Industrial"] %>
   </div>
 
-  <div class="field">
-    <%= form.label :land_area %>
-      <%= form.number_field :land_area %>
+  <div class="input-group mb-3">
+    <span class="input-group-text" id="basic-addon1">
+      <%= form.label :land_area %>
+    </span>
+
+    <%= form.number_field :land_area, class:"form-control" %>
   </div>
 
-  <div class="field">
-    <%= form.label :floor_area %>
-    <%= form.number_field :floor_area %>
+  <div class="input-group mb-3">
+    <span class="input-group-text" id="basic-addon1">
+      <%= form.label :floor_area %>
+    </span>
+
+    <%= form.number_field :floor_area, class:"form-control" %>
   </div>
 
-  <div class="field">
-    <%= form.label :town_and_province %>
-    <%= form.text_field :town_and_province %>
+  <div class="input-group mb-3">
+    <span class="input-group-text" id="basic-addon1">
+      <%= form.label :town_and_province %>
+    </span>
+
+    <%= form.text_field :town_and_province, class:"form-control" %>
   </div>
 
-  <div class="field">
-    <%= form.label :bedroom %>
-    <%= form.number_field :bedroom %>
+  <div class="input-group mb-3">
+    <span class="input-group-text" id="basic-addon1">
+      <%= form.label :bedroom %>
+    </span>
+    
+    <%= form.number_field :bedroom, class:"form-control" %>
   </div>
 
-  <div class="field">
-    <%= form.label :bathroom %>
-    <%= form.number_field :bathroom %>
+  <div class="input-group mb-3">
+    <span class="input-group-text" id="basic-addon1">
+      <%= form.label :bathroom %>
+    </span>
+    
+    <%= form.number_field :bathroom, class:"form-control" %>
   </div>
 
-  <div class="field">
-    <%= form.label :carport %>
-    <%= form.number_field :carport %>
+  <div class="input-group mb-3">
+    <span class="input-group-text" id="basic-addon1">
+      <%= form.label :carport %>
+    </span>
+    
+    <%= form.number_field :carport, class:"form-control" %>
   </div>
 
-  <div class="field">
-    <%= form.label :image %>
-    <%= form.text_field :image %>
+  <div class="input-group mb-3">
+    <span class="input-group-text" id="basic-addon1">
+      <%= form.label :image %>
+      <%= form.file_field :image, class:"form-control" %>
+    </span>
+    
   </div>
-
+  <br>
   <div class="actions">
     <%= form.submit %>
   </div>

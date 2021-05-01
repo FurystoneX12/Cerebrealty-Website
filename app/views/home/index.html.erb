@@ -16,7 +16,7 @@
 				And we also offer you... <a href="<%= home_about_us_path %>">See More...</a>
 			</p> 
 		</div>
-	</div>
+	</div> 
 	<br>
 	<h2>Stuff we offer</h2>
 	<div class="row row-cols-1 row-cols-md-3 g-4">
@@ -70,137 +70,7 @@
 	</div>
 </div> 
 <br>
-<div class="bg-primary">
-	<br>
-	<div class="container text-white">
-		<h2>Real Estate Section</h2>
-		<br>
-		<p>Browse Properties in these areas:</p>
-	</div>
-	<div class="container">
-		<div class="row row-cols-1 row-cols-md-3 g-4">
-			<div class="col">
-				<div class="card">
-					<%= image_tag("taguig city.png", alt:"Taguig City", style: "width: 100%;") %>
-					<div class="card-body">
-						<h5 class="card-title">Taguig City</h5>
-						<p class="card-text">This is a longer card with supporting text below as a natural lead-in  additional content. This content is a little bit longer.</p>
-					</div>
-				</div>
-			</div>
-			<div class="col">
-				<div class="card">
-					<%= image_tag("makati city.png", alt:"Taguig City", style: "width: 100%;") %>
-					<div class="card-body">
-						<h5 class="card-title">Makati City</h5>
-						<p class="card-text">This is a longer card with supporting text below as a natural lead-in  additional content. This content is a little bit longer.</p>
-					</div>
-				</div>
-			</div>
-			<div class="col">
-				<div class="card">
-					<%= image_tag("pasay city.png", alt:"Pasay City", style: "width: 100%;") %>
-					<div class="card-body">
-						<h5 class="card-title">Pasay City</h5>
-						<p class="card-text">This is a longer card with supporting text below as a natural lead-in  additional content.</p>
-					</div>
-				</div>
-			</div>
-			<div class="col">
-				<div class="card">
-					<%= image_tag("paranaque.png", alt:"Taguig City", style: "width: 100%;") %>
-					<div class="card-body">
-						<h5 class="card-title">Paranaque</h5>
-						<p class="card-text">This is a longer card with supporting text below as a natural lead-in  additional content. This content is a little bit longer.</p>
-					</div>
-				</div>
-			</div>
-			<div class="col">
-				<div class="card">
-					<%= image_tag("quezon city.png", alt:"Taguig City", style: "width: 100%;") %>
-					<div class="card-body">
-						<h5 class="card-title">Quezon City</h5>
-						<p class="card-text">This is a longer card with supporting text below as a natural lead-in  additional content. This content is a little bit longer.</p>
-					</div>
-				</div>
-			</div>
-			<!-- <div class="col">
-				<div class="card">
-					<div class="card-body text-center">
-						<br><br><br><br><br><br><br>
-						<button type="button" class="btn btn-primary">See More</button>
-						<br><br><br><br><br><br><br>
-					</div>
-				</div>
-			</div> -->
-		</div>
-	</div>
-	<br>
-</div>
 
-<div style="background-color: black;">
-	<br>
-	<div class="container text-white">
-		<h2>Law Section</h2>
-		<br>
-		<p>Browse our services</p>
-		<div class="row row-cols-1 row-cols-md-3 g-4">
-			<a href="#">
-				<div class="col">
-					<div class="card text-white bg-primary mb-3">
-						<div class="card-body">
-							<h5 class="card-title">Legal Advices</h5>
-						</div>
-					</div>
-				</div>
-			</a>
-			<a href="#">
-				<div class="col">
-					<div class="card text-white bg-primary mb-3">
-						<div class="card-body">
-							<h5 class="card-title">Consultancy</h5>
-						</div>
-					</div>
-				</div>
-			</a>
-			<a href="#">
-				<div class="col">
-					<div class="card text-white bg-primary mb-3">
-						<div class="card-body">
-							<h5 class="card-title">Primary card title</h5>
-							<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-						</div>
-					</div>
-				</div>
-			</a>
-			<a href="#">
-				<div class="col">
-					<div class="card text-white bg-primary mb-3">
-						<div class="card-body">
-							<h5 class="card-title">Primary card title</h5>
-							<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-						</div>
-					</div>
-				</div>
-			</a>
-			<a href="#">
-				<div class="col">
-					<div class="card text-white bg-primary mb-3">
-						<div class="card-body">
-							<h5 class="card-title">Primary card title</h5>
-							<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-						</div>
-					</div>
-				</div>
-			</a>
-		</div>
-	</div>
-	<br>
-</div>
-<div>
-	<br>
-	<div class="container">
-		<h2>Engineering Section</h2>
-		<br>
-	</div>
-</div
+<%= render "partial files/real estate plugin" %>
+<%= render "partial files/law plugin" %>
+<%= render "partial files/engineering plugin" %>

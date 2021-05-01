@@ -10,10 +10,24 @@
     </div>
   </div> -->
   <br>
-  <%= render "ex._files/cities in manila" %>
+  <%#= render "ex._files/cities in manila" %>
   <br>
+  <div class="row row-cols-1 row-cols-md-3 g-4 ">
+    <% @real_estates.each do |real_estate| %>
+      <div class="col">
+        <div class="card">
+          <a href="" class="link-dark">
+            <div class="card-body">
+              <img src="..." class="card-img-top" alt="...">
+              <h5 class="card-title"><%= real_estate.offer_type %> : <%= real_estate.object %></h5>
+              <p class="card-text"></p>
+            </div>
+          </a>
+        </div>
+      </div>
+    <% end %>
+  </div>
 
-  <h1>Real Estate</h1>
 
   <table>
     <thead>
