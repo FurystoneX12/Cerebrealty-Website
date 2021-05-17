@@ -10,7 +10,15 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_05_01_142630) do
+ActiveRecord::Schema.define(version: 2021_05_17_133944) do
+
+  create_table "law_articles", force: :cascade do |t|
+    t.string "article_name"
+    t.string "content"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["article_name"], name: "index_law_articles_on_article_name"
+  end
 
   create_table "real_estates", force: :cascade do |t|
     t.string "offer_type"
@@ -34,6 +42,18 @@ ActiveRecord::Schema.define(version: 2021_05_01_142630) do
     t.index ["object"], name: "index_real_estates_on_object"
     t.index ["offer_type"], name: "index_real_estates_on_offer_type"
     t.index ["town_and_province"], name: "index_real_estates_on_town_and_province"
+  end
+
+  create_table "users", force: :cascade do |t|
+    t.string "email", default: "", null: false
+    t.string "encrypted_password", default: "", null: false
+    t.string "reset_password_token"
+    t.datetime "reset_password_sent_at"
+    t.datetime "remember_created_at"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["email"], name: "index_users_on_email", unique: true
+    t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
 end

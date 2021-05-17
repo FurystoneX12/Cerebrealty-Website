@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
+  resources :law_articles
+  devise_for :users
   resources :real_estates
-  resources :listings
   resources :properties
   #get 'home/index'
   #get "about"
@@ -11,6 +12,8 @@ Rails.application.routes.draw do
   get "home/law_section"
   get "home/engineering_section"
   #get "listings/index"
-  root "home#index"
+  root "home#index_public"
+
+  #get "home/index_private"
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end

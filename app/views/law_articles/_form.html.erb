@@ -1,0 +1,27 @@
+<%= form_with(model: law_article) do |form| %>
+  <% if law_article.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(law_article.errors.count, "error") %> prohibited this law_article from being saved:</h2>
+
+      <ul>
+        <% law_article.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :article_name %>
+    <%= form.text_field :article_name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :content %>
+    <%= form.text_field :content %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
