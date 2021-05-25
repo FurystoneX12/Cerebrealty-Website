@@ -2,7 +2,6 @@ Rails.application.routes.draw do
   resources :law_articles
   devise_for :users
   resources :real_estates
-  resources :properties
   #get 'home/index'
   #get "about"
   get "home/about_us"

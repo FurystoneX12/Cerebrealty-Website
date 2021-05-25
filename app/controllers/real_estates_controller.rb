@@ -1,4 +1,4 @@
-class RealEstatesController < ApplicationController
+class RealEstatesController < ApplicationController 
   before_action :set_real_estate, only: %i[ show edit update destroy ]
 
   # GET /real_estates or /real_estates.json
@@ -9,6 +9,12 @@ class RealEstatesController < ApplicationController
   # GET /real_estates/1 or /real_estates/1.json
   def show
   end
+
+  # showing images from database to website
+  # def show_image
+  #   @real_estate = RealEstate.find(params[:id])
+  #   send_data @real_estate.image, :type => 'image/png',:disposition => 'inline'
+  # end
 
   # GET /real_estates/new
   def new
