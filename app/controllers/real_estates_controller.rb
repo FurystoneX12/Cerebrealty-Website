@@ -44,7 +44,7 @@ class RealEstatesController < ApplicationController
   def update
     respond_to do |format|
       if @real_estate.update(real_estate_params)
-        format.html { redirect_to @real_estate, notice: "Real estate was successfully updated." }
+        format.html { redirect_to @real_estate, notice: "Property Information was successfully updated." }
         format.json { render :show, status: :ok, location: @real_estate }
       else
         format.html { render :edit, status: :unprocessable_entity }
@@ -70,6 +70,7 @@ class RealEstatesController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def real_estate_params
-      params.require(:real_estate).permit(:offer_type, :object, :land_area, :floor_area, :town_and_province, :bedroom, :bathroom, :carport, :image)
+      params.require(:real_estate).permit(:offer_type, :object, :land_area, :floor_area, :town_and_province, :bedroom, :bathroom, :carport, :image, :caption, :synopsis)
     end
 end
+ 

@@ -1,7 +1,29 @@
 
 <div class="container">
-  <p id="notice"><%= notice %></p>
+  <!-- notice -->
+  <div class="alert alert-warning alert-dismissible fade show" role="alert">
+    <p id="notice"><%= notice %></p>
+    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+  </div>
+  <!-- end of notice -->
 
+  <div class="card">
+    <div class="card-body">
+      <div class="text-center">
+        <%= image_tag("image not available at the moment, please stay tuned.png", width:"50%;") %>
+      </div>
+      <br>
+      <h3><%= @real_estate.caption %></h3>
+    </div>
+  </div>
+
+  <br>
+  
+  <div class="card">
+    <div class="card-body">
+      <%= @real_estate.synopsis %>
+    </div>
+  </div>
   <p>
     <strong>Offer type:</strong>
     <%= @real_estate.offer_type %>
@@ -45,7 +67,7 @@
   <p>
     <strong>Image:</strong>
     <%= @real_estate.image %>
-    <!-- < %= image_tag @real_estate.image, style:"width: 50%; display: block;" %> -->
+    <image src="<%= @real_estate.image %>" style="width: 50%;">
   </p>
 
   <%= link_to 'Edit', edit_real_estate_path(@real_estate) %> |
