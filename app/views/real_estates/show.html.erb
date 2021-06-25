@@ -2,7 +2,7 @@
 <div class="container">
   <!-- notice -->
   <div class="alert alert-warning alert-dismissible fade show" role="alert">
-    <p id="notice"><%= notice %></p>
+    <strong><p id="notice"><%= notice %></p></strong>
     <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
   </div>
   <!-- end of notice -->
@@ -10,10 +10,14 @@
   <div class="card">
     <div class="card-body">
       <div class="text-center">
-        <%= image_tag("image not available at the moment, please stay tuned.png", width:"50%;") %>
+        <% if @real_estate.image == nil? %>
+          <%= image_tag("image not available at the moment, please stay tuned.png", width:"50%;") %>
+        <% else %>
+          <%= image_tag @real_estate.image, style:"max-width: 75%; max-height: 50%;" %>
+        <% end %>
       </div>
       <br>
-      <h3><%= @real_estate.caption %></h3>
+      <h4><%= @real_estate.synopsis %></h4>
     </div>
   </div>
 
@@ -21,55 +25,95 @@
   
   <div class="card">
     <div class="card-body">
-      <%= @real_estate.synopsis %>
+      <h3><%= @real_estate.caption %></h3>
     </div>
   </div>
-  <p>
-    <strong>Offer type:</strong>
-    <%= @real_estate.offer_type %>
-  </p>
-
   <p>
     <strong>Object:</strong>
     <%= @real_estate.object %>
   </p>
-
-  <p>
-    <strong>Land area:</strong>
-    <%= @real_estate.land_area %>
-  </p>
-
-  <p>
-    <strong>Floor area:</strong>
-    <%= @real_estate.floor_area %>
-  </p>
-
+  
   <p>
     <strong>Town and province:</strong>
     <%= @real_estate.town_and_province %>
   </p>
 
-  <p>
-    <strong>Bedroom:</strong>
-    <%= @real_estate.bedroom %>
-  </p>
-
-  <p>
-    <strong>Bathroom:</strong>
-    <%= @real_estate.bathroom %>
-  </p>
-
-  <p>
-    <strong>Carport:</strong>
-    <%= @real_estate.carport %>
-  </p>
-
-  <p>
+  <!-- <p>
     <strong>Image:</strong>
-    <%= @real_estate.image %>
-    <image src="<%= @real_estate.image %>" style="width: 50%;">
-  </p>
+    < %= @real_estate.image %>
+  </p> -->
 
-  <%= link_to 'Edit', edit_real_estate_path(@real_estate) %> |
+  <br>
+  <h5>Technical Descriptions</h5>
+
+  <table class="table table-borderless table-hover">
+
+    <!-- Offer Type -->
+    <tr>
+      <th><strong>Offer Type</strong></th>
+      <th><%= @real_estate.offer_type %></th>
+    </tr>
+
+    <!-- Property Type -->
+    <tr>
+      <th><strong>Property Type</strong></th>
+      <th><%= @real_estate.object %></th>
+    </tr>
+    <!-- Land Area -->
+    <% if @real_estate.land_area != nil %>
+      <tr>
+        <th><strong>Land Area</strong></th>
+        <th><%= @real_estate.land_area %>sqm</th>
+      </tr>
+    <% end %>
+
+    <!-- Floor Area -->
+    <% if @real_estate.floor_area != nil %>
+      <tr>
+        <th><strong> Floor Area</strong> </th>
+        <th><%= @real_estate.floor_area %>sqm</th>
+      </tr>
+    <% end %>
+
+    <!-- no. of Bedrooms -->
+    <% if @real_estate.bedroom != nil %>
+      <th><strong>No. of Bedrooms</strong></th>
+      <th><%= @real_estate.bedroom %> </th>
+
+    <% else %>
+      <th><strong>No. of Bedrooms</strong></th>
+      <th>Not specified</th>
+
+    <% end %>
+
+    <!-- no. of Bathrooms -->
+    <% if @real_estate.bathroom != nil %>
+      <tr>
+        <th><strong>No. of Bathrooms</strong></th>
+        <th><%= @real_estate.bathroom %></th>
+      </tr>
+    <% else %>
+      <tr>
+        <th><strong>No. of Bathrooms</strong></th>
+        <th>Not specified</th>
+      </tr>
+    <% end %>
+
+    <!-- no. of Carports -->
+    <% if @real_estate.carport != nil %>
+      <th><strong>No. of Carports</strong></th>
+      <th><%= @real_estate.carport %> </th>
+
+    <% else %>
+      <th><strong>No. of Carports</strong></th>
+      <th>Not specified</th>
+
+    <% end %>
+    
+  </table>
+
+  <button type="button" class="btn btn-primary">
+    <%= link_to 'Edit', edit_real_estate_path(@real_estate) %>
+  </button>
   <%= link_to 'Back', real_estates_path %>
 </div>

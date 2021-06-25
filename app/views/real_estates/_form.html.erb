@@ -12,81 +12,79 @@
   <% end %>
 
   <div class="form-floating mb-3">
+    <% if real_estate.image.attached? %>
+      <%= image_tag real_estate.image, style:"max-width: 50%;" %>
+    <% end %>
+
+    <%= form.file_field :image, class:"form-control" %>
+  </div> 
+
+  <div class="form-group">
+    <%= form.submit controller.action_name.capitalize + " Main Photo", class:"btn btn-primary" %>
+  </div>
+
+  <div class="form-floating mb-3">
+    <%= form.text_field :synopsis, class:"form-control" %>
+    <%= form.label :synopsis %>
+  </div>
+  
+  <div class="form-floating mb-3">
     <%= form.text_field :caption, class:"form-control" %>
     <%= form.label :caption %>
+  </div>
+
+  <div class="form-floating mb-3">
+    <%= form.select :offer_type, ["Category ", "For Sale", "For Lease", "Development", "Foreclosed"], class:"form-select" %>
+    <%= form.label :offer_type %>
     
   </div>
 
-  <div>
-    <%= form.text_area :synopis, class:"form-control" %>
-  </div>
-
-  <div class="form-floating mb-3">
-    <span class="input-group-text" id="basic-addon1">
-      <%= form.label :offer_type %>
-    </span>
-    <%= form.select :offer_type, ["For Sale", "For Lease", "Development", "Foreclosed"], class:"form-select" %>
-  </div>
-
-  <div class="form-floating mb-3">
-    <span class="input-group-text" id="basic-addon1">
-      <%= form.label :object %>
-    </span>
+  <div class="form-floating mb-3 input-group mb-3">
     <%= form.select :object, ["Condominium", "House and Lot", "House", "Lot", "Townhouse", "Lot with Structure", "Farmland", "Apartment", "Commercial", "Industrial"] %>
+    <%= form.label :object %>
   </div>
 
   <div class="form-floating mb-3">
-    <span class="input-group-text" id="basic-addon1">
-      <%= form.label :land_area %>
-    </span>
-    <%= form.number_field :land_area, class:"form-control" %>
+    <input type="number" name="">
   </div>
 
   <div class="form-floating mb-3">
-    <span class="input-group-text" id="basic-addon1">
-      <%= form.label :floor_area %>
-    </span>
-    <%= form.number_field :floor_area, class:"form-control" %>
-  </div>
-
-  <div class="form-floating mb-3">
-    <span class="input-group-text" id="basic-addon1">
-      <%= form.label :town_and_province %>
-    </span>
     <%= form.text_field :town_and_province, class:"form-control" %>
+    <%= form.label :town_and_province %>
+  </div>
+
+  <br>
+  Technical Descriptions:
+  <br><br>
+  <div class="form-floating mb-3">
+     <%= form.number_field :land_area, class:"form-control" %>
+    <%= form.label :land_area %>
   </div>
 
   <div class="form-floating mb-3">
-    <span class="input-group-text" id="basic-addon1">
-      <%= form.label :bedroom %>
-    </span>
+    <%= form.number_field :floor_area, class:"form-control" %>
+    <%= form.label :floor_area %>
+  </div>
+
+  <div class="form-floating mb-3">
     <%= form.number_field :bedroom, class:"form-control" %>
+    <%= form.label :bedroom %>
   </div>
 
   <div class="form-floating mb-3">
-    <span class="input-group-text" id="basic-addon1">
-      <%= form.label :bathroom %>
-    </span>
     <%= form.number_field :bathroom, class:"form-control" %>
+    <%= form.label :bathroom %>
   </div>
 
   <div class="form-floating mb-3">
-    <span class="input-group-text" id="basic-addon1">
-      <%= form.label :carport %>
-    </span>
     <%= form.number_field :carport, class:"form-control" %>
+    <%= form.label :carport %>
   </div>
 
-  <div class="form-floating mb-3">
-    <span class="input-group-text" id="basic-addon1">
-      <%= form.label :image %>
-      <%= form.file_field :image, class:"form-control", multiple: true %>
-    </span>
-  </div>
-  <%= url_for(@real_estate.image) %>
+
 
   <br>
   <div class="actions">
-    <%= form.submit %>
+    <%= form.submit class:"btn btn-success" %>
   </div>
 <% end %>

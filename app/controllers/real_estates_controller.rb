@@ -31,7 +31,7 @@ class RealEstatesController < ApplicationController
 
     respond_to do |format|
       if @real_estate.save
-        format.html { redirect_to @real_estate, notice: "Real estate was successfully created." }
+        format.html { redirect_to @real_estate, notice: "Property was successfully created." }
         format.json { render :show, status: :created, location: @real_estate }
       else
         format.html { render :new, status: :unprocessable_entity }
@@ -57,7 +57,7 @@ class RealEstatesController < ApplicationController
   def destroy
     @real_estate.destroy
     respond_to do |format|
-      format.html { redirect_to real_estates_url, notice: "Real estate was successfully destroyed." }
+      format.html { redirect_to real_estates_url, notice: "Property was successfully deleted." }
       format.json { head :no_content }
     end
   end
@@ -70,7 +70,7 @@ class RealEstatesController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def real_estate_params
-      params.require(:real_estate).permit(:offer_type, :object, :land_area, :floor_area, :town_and_province, :bedroom, :bathroom, :carport, :image, :caption, :synopsis)
+      params.require(:real_estate).permit(:offer_type, :object, :land_area, :floor_area, :town_and_province, :bedroom, :bathroom, :carport, :image, :caption, :synopsis, :price)
     end
 end
  
