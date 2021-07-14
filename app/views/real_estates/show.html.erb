@@ -1,4 +1,5 @@
 
+<title><%= @real_estate.synopsis %> - Cerebrealty</title>
 <div class="container">
   <!-- notice -->
   <div class="alert alert-warning alert-dismissible fade show" role="alert">
@@ -59,11 +60,12 @@
       <th><strong>Property Type</strong></th>
       <th><%= @real_estate.object %></th>
     </tr>
+
     <!-- Land Area -->
     <% if @real_estate.land_area != nil %>
       <tr>
         <th><strong>Land Area</strong></th>
-        <th><%= @real_estate.land_area %>sqm</th>
+        <th><%= number_with_delimiter(@real_estate.land_area, :delimiter => ",") %>sqm</th>
       </tr>
     <% end %>
 
@@ -71,7 +73,7 @@
     <% if @real_estate.floor_area != nil %>
       <tr>
         <th><strong> Floor Area</strong> </th>
-        <th><%= @real_estate.floor_area %>sqm</th>
+        <th><%= number_with_delimiter(@real_estate.floor_area, :delimiter => ",") %>sqm</th>
       </tr>
     <% end %>
 
@@ -112,8 +114,6 @@
     
   </table>
 
-  <button type="button" class="btn btn-primary">
-    <%= link_to 'Edit', edit_real_estate_path(@real_estate) %>
-  </button>
+  <%= link_to 'Edit', edit_real_estate_path(@real_estate), class:"btn btn-primary" %>
   <%= link_to 'Back', real_estates_path %>
 </div>

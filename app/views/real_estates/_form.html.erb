@@ -1,3 +1,4 @@
+
 <%= form_with(model: real_estate) do |form| %>
   <% if real_estate.errors.any? %>
     <div id="error_explanation">
@@ -36,11 +37,10 @@
   <div class="form-floating mb-3">
     <%= form.select :offer_type, ["Category ", "For Sale", "For Lease", "Development", "Foreclosed"], class:"form-select" %>
     <%= form.label :offer_type %>
-    
   </div>
 
   <div class="form-floating mb-3 input-group mb-3">
-    <%= form.select :object, ["Condominium", "House and Lot", "House", "Lot", "Townhouse", "Lot with Structure", "Farmland", "Apartment", "Commercial", "Industrial"] %>
+    <%= form.select :object, ["Select", "Condominium", "House and Lot", "House", "Lot", "Townhouse", "Lot with Structure", "Farmland", "Apartment", "Commercial", "Industrial"] %>
     <%= form.label :object %>
   </div>
 
@@ -53,33 +53,53 @@
     <%= form.label :town_and_province %>
   </div>
 
+
   <br>
   Technical Descriptions:
   <br><br>
-  <div class="form-floating mb-3">
-     <%= form.number_field :land_area, class:"form-control" %>
-    <%= form.label :land_area %>
+
+  <div class="row g-2">
+
+    <div class="col-md">
+      <div class="form-floating mb-3">
+         <%= form.number_field :land_area, class:"form-control" %>
+        <%= form.label :land_area %>
+      </div>
+    </div>
+
+    <div class="col-md">
+      <div class="form-floating mb-3">
+        <%= form.number_field :floor_area, class:"form-control" %>
+        <%= form.label :floor_area %>
+      </div>
+    </div>
+
   </div>
 
-  <div class="form-floating mb-3">
-    <%= form.number_field :floor_area, class:"form-control" %>
-    <%= form.label :floor_area %>
+  <div class="row g-2">
+
+    <div class="col-md">
+      <div class="form-floating mb-3">
+        <%= form.number_field :bedroom, class:"form-control" %>
+        <%= form.label :bedroom %>
+      </div>
+    </div>
+
+    <div class="col-md">
+      <div class="form-floating mb-3">
+        <%= form.number_field :bathroom, class:"form-control" %>
+        <%= form.label :bathroom %>
+      </div>
+    </div>
+    <div class="col-md">
+      <div class="form-floating mb-3">
+        <%= form.number_field :carport, class:"form-control" %>
+        <%= form.label :carport %>
+      </div>
+    </div>
   </div>
 
-  <div class="form-floating mb-3">
-    <%= form.number_field :bedroom, class:"form-control" %>
-    <%= form.label :bedroom %>
-  </div>
-
-  <div class="form-floating mb-3">
-    <%= form.number_field :bathroom, class:"form-control" %>
-    <%= form.label :bathroom %>
-  </div>
-
-  <div class="form-floating mb-3">
-    <%= form.number_field :carport, class:"form-control" %>
-    <%= form.label :carport %>
-  </div>
+  
 
 
 

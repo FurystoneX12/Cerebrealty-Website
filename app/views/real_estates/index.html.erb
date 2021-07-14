@@ -1,5 +1,8 @@
- 
+
+<title>Property</title>
+
 <div class="container">
+  
   <div class="alert alert-warning alert-dismissible fade show" role="alert">
     <strong><p id="notice"><%= notice %></p></strong> 
     <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
@@ -25,39 +28,102 @@
             <!-- < % elsif real_estate.image == nil? %> -->
             <% else %>
               <%= image_tag("unavailable image.png", width:"100%;") %>
+
             <% end %>
             <h5 class="card-title"><%= real_estate.synopsis %></h5>
+
             <p class="card-text">
+              <!-- Condominium -->
               <% if real_estate.object == "Condominium" %>
                 🏢<%= real_estate.object %>
+                <% if real_estate.floor_area != nil? %>
+                   - FA: <%= number_with_delimiter(real_estate.floor_area, :delimiter => ",") %>sqm
+                <% end %>
               
+              <!-- House and Lot -->
               <% elsif real_estate.object == "House and Lot" %>
                 🏡<%= real_estate.object %>
+
+                <% if real_estate.floor_area != nil? %>
+                   - FA: <%= number_with_delimiter(real_estate.floor_area, :delimiter => ",") %>sqm
+                <% end %>
+
+                <% if real_estate.land_area != nil? %>
+                  <%= number_with_delimiter(real_estate.land_area, :delimiter => ",") %>sqm
+                <% end %>
               
+              <!-- House -->
               <% elsif real_estate.object == "House" %>
                 🏠<%= real_estate.object %>
-              
+
+                <% if real_estate.floor_area != nil? %>
+                   - FA: <%= number_with_delimiter(real_estate.floor_area, :delimiter => ",") %>sqm
+                <% end %>
+
+              <!-- Lot -->
               <% elsif real_estate.object == "Lot" %>
                 ⛱<%= real_estate.object %>
-              
+
+                <% if real_estate.land_area != nil? %>
+                  <%= number_with_delimiter(real_estate.land_area, :delimiter => ",") %>sqm
+                <% end %>
+
+              <!-- Townhouse -->
               <% elsif real_estate.object == "Townhouse" %>
                 🏘<%= real_estate.object %>
-              
+
+                <% if real_estate.floor_area != nil? %>
+                   - FA: <%= number_with_delimiter(real_estate.floor_area, :delimiter => ",") %>sqm
+                <% end %>
+
+              <!-- Lot with Structure -->
               <% elsif real_estate.object == "Lot with Structure" %>
                 🏡<%= real_estate.object %>
-              
+
+                <% if real_estate.land_area != nil? %>
+                  <%= number_with_delimiter(real_estate.land_area, :delimiter => ",") %>sqm
+                <% end %>
+
+              <!-- Farmland -->
               <% elsif real_estate.object == "Farmland" %>
                 🚜<%= real_estate.object %>
-              
+
+                <% if real_estate.land_area != nil? %>
+                  <%= number_with_delimiter(real_estate.land_area, :delimiter => ",") %>sqm
+                <% end %>
+
+              <!-- Apartment -->
               <% elsif real_estate.object == "Apartment" %>
                 🏢<%= real_estate.object %>
-              
+
+                <% if real_estate.floor_area != nil? %>
+                   - FA: <%= number_with_delimiter(real_estate.floor_area, :delimiter => ",") %>sqm
+                <% end %>
+
+              <!-- Commercial -->
               <% elsif real_estate.object == "Commercial" %>
                 🏗️<%= real_estate.object %>
-              
+                
+                <% if real_estate.land_area != nil? %>
+                  <%= number_with_delimiter(real_estate.land_area, :delimiter => ",") %>sqm
+                <% end %>
+
+                <% if real_estate.floor_area != nil? %>
+                   - FA: <%= number_with_delimiter(real_estate.floor_area, :delimiter => ",") %>sqm
+                <% end %>
+
+              <!-- Industrials -->
               <% elsif real_estate.object == "Industrial" %>
                 🏭<%= real_estate.object %>
-              
+                
+                <% if real_estate.land_area != nil? %>
+                  <%= number_with_delimiter(real_estate.land_area, :delimiter => ",") %>sqm
+                <% end %>
+
+                <% if real_estate.floor_area != nil? %>
+                   - FA: <%= number_with_delimiter(real_estate.floor_area, :delimiter => ",") %>sqm
+                <% end %>
+
               <% end %>
             </p>
             <%= link_to 'Show', real_estate, class:"btn btn-primary" %>

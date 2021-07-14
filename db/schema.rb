@@ -51,8 +51,8 @@ ActiveRecord::Schema.define(version: 2021_06_23_120621) do
   create_table "real_estates", force: :cascade do |t|
     t.string "offer_type"
     t.string "object"
-    t.float "land_area"
-    t.float "floor_area"
+    t.decimal "land_area"
+    t.decimal "floor_area"
     t.string "town_and_province"
     t.integer "bedroom"
     t.integer "bathroom"
