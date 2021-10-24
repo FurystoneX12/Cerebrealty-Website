@@ -1,0 +1,2 @@
+class AffidavitOfAuthenticity < ApplicationRecord
+end

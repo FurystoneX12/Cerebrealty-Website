@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :affidavit_of_authenticities
   resources :law_articles
   devise_for :users
   resources :real_estates

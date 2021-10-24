@@ -1,0 +1,1 @@
+json.partial! "affidavit_of_authenticities/affidavit_of_authenticity", affidavit_of_authenticity: @affidavit_of_authenticity

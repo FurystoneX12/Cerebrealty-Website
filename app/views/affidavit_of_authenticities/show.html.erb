@@ -1,0 +1,62 @@
+<div class="container">
+  <p id="notice"><%= notice %></p>
+
+  <p>
+    <strong>First name:</strong>
+    <%= @affidavit_of_authenticity.first_name %>
+  </p>
+
+  <p>
+    <strong>Last name:</strong>
+    <%= @affidavit_of_authenticity.last_name %>
+  </p>
+
+  <p>
+    <strong>Address:</strong>
+    <%= @affidavit_of_authenticity.address %>
+  </p>
+
+  <%= link_to 'Edit', edit_affidavit_of_authenticity_path(@affidavit_of_authenticity) %> |
+  <%= link_to 'Back', affidavit_of_authenticities_path %>
+
+  <br>
+  <br>
+  <!-- Document preview -->
+  <div class="card" style="width: 850px; height: 1400px; max-height: 1400px; max-width: 850px;">
+    <br>
+    <br>
+    <div class="container" style="padding-left: 75px; padding-right: 75px;">
+      <p>
+        Republic of the Philippines ) <br>
+        Taguig City              ) s.s.
+      </p>
+      <p class="text-center">AFFIDAVIT OF AUTHENTICITY</p>
+      <p>
+        I, <u><%= @affidavit_of_authenticity.first_name %></u> <u><%= @affidavit_of_authenticity.last_name %></u>, Filipino, of legal age, married, and presently assigned at <u><%= @affidavit_of_authenticity.address %></u>, after having sworn to in accordance with law, hereby depose and state that the hereto attached copy of this blotter is the exact copy of the blotter on file with the Military Police Battalion, and that the same is unblemished by any alteration.
+      </p>
+      <p>Affiant further sayeth none.</p>
+      <p>
+        IN WITNESS WHERETO, I HAVE HEREUNTO SET MY SIGNATURE THIS 17th day of October 2019 IN TAGUIG CITY.
+      </p>
+      <br>
+      <br>
+      <p class="text-end">
+        <u><%= @affidavit_of_authenticity.first_name %></u> <u><%= @affidavit_of_authenticity.last_name %></u>
+        <br>
+        Complainant
+      </p>
+      <p>
+        Subscribed and sworn to before me in the CITY OF TAGUIG THIS 17TH DAY OF OCTOBER 2019, affiant exhibiting to me his AFP ID LNN-L-NNNNNN which expires on M/D/YYYY.
+      </p>
+      <br>
+      <br>
+      <p>
+        Doc No: <br>
+        Page No: <br>
+        Book No: <br>
+        Series of: YYYY
+      </p>
+    </div>
+  </div>
+
+</div>

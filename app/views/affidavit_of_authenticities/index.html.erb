@@ -1,0 +1,31 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Affidavit Of Authenticities</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>First name</th>
+      <th>Last name</th>
+      <th>Address</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @affidavit_of_authenticities.each do |affidavit_of_authenticity| %>
+      <tr>
+        <td><%= affidavit_of_authenticity.first_name %></td>
+        <td><%= affidavit_of_authenticity.last_name %></td>
+        <td><%= affidavit_of_authenticity.address %></td>
+        <td><%= link_to 'Show', affidavit_of_authenticity %></td>
+        <td><%= link_to 'Edit', edit_affidavit_of_authenticity_path(affidavit_of_authenticity) %></td>
+        <td><%= link_to 'Destroy', affidavit_of_authenticity, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Affidavit Of Authenticity', new_affidavit_of_authenticity_path %>
